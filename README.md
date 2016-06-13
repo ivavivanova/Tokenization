@@ -1,8 +1,7 @@
 Tokenization
 ======
 
-<p>It is a program that encrypts a bank card number to token and decrypts token to a bank card number.</p>
-<p>The project <b>Tokenization</b> is created for the "OOP C#.Net" course at University, 2016</p>
+
 
 How to run the project
 =====================
