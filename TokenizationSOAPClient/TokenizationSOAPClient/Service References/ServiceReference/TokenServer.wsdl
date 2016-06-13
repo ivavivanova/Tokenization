@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="TokenServer" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:15093/TokenServer.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:15093/TokenServer.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ITokenServer_ValidAndLuhnTest_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidAndLuhnTest" />
+  </wsdl:message>
+  <wsdl:message name="ITokenServer_ValidAndLuhnTest_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidAndLuhnTestResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITokenServer_MakeTokenByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:MakeTokenByID" />
+  </wsdl:message>
+  <wsdl:message name="ITokenServer_MakeTokenByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MakeTokenByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITokenServer_UsersSave_InputMessage">
+    <wsdl:part name="parameters" element="tns:UsersSave" />
+  </wsdl:message>
+  <wsdl:message name="ITokenServer_UsersSave_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UsersSaveResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITokenServer_ValidationLog_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidationLog" />
+  </wsdl:message>
+  <wsdl:message name="ITokenServer_ValidationLog_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidationLogResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITokenServer_AreInSystem_InputMessage">
+    <wsdl:part name="parameters" element="tns:AreInSystem" />
+  </wsdl:message>
+  <wsdl:message name="ITokenServer_AreInSystem_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AreInSystemResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITokenServer_TokensSave_InputMessage">
+    <wsdl:part name="parameters" element="tns:TokensSave" />
+  </wsdl:message>
+  <wsdl:message name="ITokenServer_TokensSave_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TokensSaveResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITokenServer_LoadID_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoadID" />
+  </wsdl:message>
+  <wsdl:message name="ITokenServer_LoadID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoadIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITokenServer_IsTokenInSystem_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsTokenInSystem" />
+  </wsdl:message>
+  <wsdl:message name="ITokenServer_IsTokenInSystem_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsTokenInSystemResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITokenServer_SortedByIDAndSaveInFile_InputMessage">
+    <wsdl:part name="parameters" element="tns:SortedByIDAndSaveInFile" />
+  </wsdl:message>
+  <wsdl:message name="ITokenServer_SortedByIDAndSaveInFile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SortedByIDAndSaveInFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITokenServer_SortedByTokenAndSaveInFile_InputMessage">
+    <wsdl:part name="parameters" element="tns:SortedByTokenAndSaveInFile" />
+  </wsdl:message>
+  <wsdl:message name="ITokenServer_SortedByTokenAndSaveInFile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SortedByTokenAndSaveInFileResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ITokenServer">
+    <wsdl:operation name="ValidAndLuhnTest">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITokenServer/ValidAndLuhnTest" message="tns:ITokenServer_ValidAndLuhnTest_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITokenServer/ValidAndLuhnTestResponse" message="tns:ITokenServer_ValidAndLuhnTest_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MakeTokenByID">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITokenServer/MakeTokenByID" message="tns:ITokenServer_MakeTokenByID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITokenServer/MakeTokenByIDResponse" message="tns:ITokenServer_MakeTokenByID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UsersSave">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITokenServer/UsersSave" message="tns:ITokenServer_UsersSave_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITokenServer/UsersSaveResponse" message="tns:ITokenServer_UsersSave_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidationLog">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITokenServer/ValidationLog" message="tns:ITokenServer_ValidationLog_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITokenServer/ValidationLogResponse" message="tns:ITokenServer_ValidationLog_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AreInSystem">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITokenServer/AreInSystem" message="tns:ITokenServer_AreInSystem_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITokenServer/AreInSystemResponse" message="tns:ITokenServer_AreInSystem_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TokensSave">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITokenServer/TokensSave" message="tns:ITokenServer_TokensSave_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITokenServer/TokensSaveResponse" message="tns:ITokenServer_TokensSave_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadID">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITokenServer/LoadID" message="tns:ITokenServer_LoadID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITokenServer/LoadIDResponse" message="tns:ITokenServer_LoadID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IsTokenInSystem">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITokenServer/IsTokenInSystem" message="tns:ITokenServer_IsTokenInSystem_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITokenServer/IsTokenInSystemResponse" message="tns:ITokenServer_IsTokenInSystem_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SortedByIDAndSaveInFile">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITokenServer/SortedByIDAndSaveInFile" message="tns:ITokenServer_SortedByIDAndSaveInFile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITokenServer/SortedByIDAndSaveInFileResponse" message="tns:ITokenServer_SortedByIDAndSaveInFile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SortedByTokenAndSaveInFile">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITokenServer/SortedByTokenAndSaveInFile" message="tns:ITokenServer_SortedByTokenAndSaveInFile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITokenServer/SortedByTokenAndSaveInFileResponse" message="tns:ITokenServer_SortedByTokenAndSaveInFile_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ITokenServer" type="tns:ITokenServer">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ValidAndLuhnTest">
+      <soap:operation soapAction="http://tempuri.org/ITokenServer/ValidAndLuhnTest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MakeTokenByID">
+      <soap:operation soapAction="http://tempuri.org/ITokenServer/MakeTokenByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UsersSave">
+      <soap:operation soapAction="http://tempuri.org/ITokenServer/UsersSave" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidationLog">
+      <soap:operation soapAction="http://tempuri.org/ITokenServer/ValidationLog" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AreInSystem">
+      <soap:operation soapAction="http://tempuri.org/ITokenServer/AreInSystem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TokensSave">
+      <soap:operation soapAction="http://tempuri.org/ITokenServer/TokensSave" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadID">
+      <soap:operation soapAction="http://tempuri.org/ITokenServer/LoadID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsTokenInSystem">
+      <soap:operation soapAction="http://tempuri.org/ITokenServer/IsTokenInSystem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SortedByIDAndSaveInFile">
+      <soap:operation soapAction="http://tempuri.org/ITokenServer/SortedByIDAndSaveInFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SortedByTokenAndSaveInFile">
+      <soap:operation soapAction="http://tempuri.org/ITokenServer/SortedByTokenAndSaveInFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="TokenServer">
+    <wsdl:port name="BasicHttpBinding_ITokenServer" binding="tns:BasicHttpBinding_ITokenServer">
+      <soap:address location="http://localhost:15093/TokenServer.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
